@@ -3,6 +3,7 @@ package com.example.testingmenu;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,6 +17,8 @@ import android.view.Menu;
 
 public class MenuDesplegableActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static int opcion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,26 @@ public class MenuDesplegableActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager adminFragment = getSupportFragmentManager();
+
+        switch (opcion){
+            case 1:
+                adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img1Fragment()).commit();
+                break;
+            case 2:
+                adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img2Fragment()).commit();
+                break;
+            case 3:
+                adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img3Fragment()).commit();
+                break;
+            case 4:
+                adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img4Fragment()).commit();
+                break;
+            default:
+                adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img1Fragment()).commit();
+                break;
+        }
     }
 
     @Override
@@ -78,14 +101,16 @@ public class MenuDesplegableActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager adminFragment = getSupportFragmentManager();
+
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img1Fragment()).commit();
         } else if (id == R.id.nav_gallery) {
-
+            adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img2Fragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img3Fragment()).commit();
         } else if (id == R.id.nav_tools) {
-
+            adminFragment.beginTransaction().replace(R.id.lyt_content_menu, new Img4Fragment()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

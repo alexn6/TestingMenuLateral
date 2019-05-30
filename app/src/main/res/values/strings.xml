@@ -14,4 +14,18 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvImg1">Imagen1</string>
+    <string name="tvImg1_2">Nombre de la img \n\n Bajada de google todo legal. \n Alguna otra descripcion.</string>
+
+    <string name="tvImg2">Imagen2</string>
+    <string name="tvImg2_2">Nombre de la img \n\n Bajada de google todo legal. \n Alguna otra descripcion.</string>
+
+    <string name="tvImg3">Imagen3</string>
+    <string name="tvImg3_2">Nombre de la img \n\n Bajada de google todo legal. \n Alguna otra descripcion.</string>
+
+    <string name="tvImg4">Imagen4</string>
+    <string name="tvImg4_2">Nombre de la img \n\n Bajada de google todo legal. \n Alguna otra descripcion.</string>
 </resources>
